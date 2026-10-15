@@ -1,0 +1,14 @@
+PACOTE CORRIGIDO PARA TESTES — NÃO PUBLICAR AINDA
+
+Correções: bloqueio visual inicial em todos os laboratórios (inclusive WASI),
+verificação de sessão anônima, conferência da liberação antes de concluir
+e atualização em tempo real quando o professor bloquear uma atividade.
+
+O Firestore precisa de testes de integração em ambiente isolado para
+confirmar o comportamento de transações, permissões e sessões.
+O GitHub Pages serve HTML publicamente: o bloqueio é de interface e
+registros, não de confidencialidade do código-fonte.
+
+Este pacote NÃO inclui firebase-client.js, firebase-config.js nem teacher.js:
+eles permanecem os arquivos existentes no repositório.
+Não substituir esses arquivos com versões desconhecidas.
