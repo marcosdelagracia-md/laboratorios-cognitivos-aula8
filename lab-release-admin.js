@@ -3,7 +3,7 @@ import {onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/10.14.1/fir
 import {doc,onSnapshot,setDoc} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
 
 const PROFESSOR_UID='TXh88MO29fVS0jMLeCLcBLLxx172';
-const LABS=[['wasi','WASI'],['fdt','FDT'],['ravlt','RAVLT'],['d2r','d2-R']];
+const LABS=[['wasi','WASI'],['fdt','FDT'],['ravlt','RAVLT'],['d2r','d2-R'],['tmt','Trilhas (TMT)'],['tol','Torre de Londres']];
 const root=document.getElementById('labReleaseControls');
 const status=document.getElementById('labReleaseStatus');
 const initial=Object.fromEntries(LABS.map(([id])=>[id,false]));
