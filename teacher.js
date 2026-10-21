@@ -1,7 +1,7 @@
 import {auth,db} from './firebase-client.js';
 import {signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
 import {collection,doc,getDoc,getDocs,setDoc,writeBatch,onSnapshot} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
-const $=id=>document.getElementById(id),labs=['wasi','fdt','ravlt','d2r'],PROF='TXh88MO29fVS0jMLeCLcBLLxx172';let data=[],unsubscribeParticipants=null,unsubscribeSettings=null,applicationOpen=false;
+const $=id=>document.getElementById(id),labs=['wasi','fdt','ravlt','d2r','tmt','tol'],PROF='TXh88MO29fVS0jMLeCLcBLLxx172';let data=[],unsubscribeParticipants=null,unsubscribeSettings=null,applicationOpen=false;
 function msg(s){$('message').textContent=s}
 onAuthStateChanged(auth,u=>{const ok=!!u&&!u.isAnonymous&&u.uid===PROF;$('login').classList.toggle('hidden',ok);$('admin').classList.toggle('hidden',!ok);if(ok){startLive();}else{stopLive();if(u)msg('Esta conta não está autorizada como professor.');}});
 $('signIn').onclick=async()=>{try{await signInWithEmailAndPassword(auth,$('email').value,$('password').value)}catch(e){msg('Falha no login: '+e.message)}};
@@ -11,7 +11,7 @@ function startLive(){stopLive();unsubscribeParticipants=onSnapshot(collection(db
 async function refresh(){try{const s=await getDocs(collection(db,'participants'));data=s.docs.map(d=>({code:d.id,...d.data()})).sort((a,b)=>a.code.localeCompare(b.code));render();msg('Dados atualizados. Aplicação '+(applicationOpen?'ABERTA':'FECHADA')+'.')}catch(e){msg('Falha ao consultar dados: '+e.message)}}
 $('refresh').onclick=refresh;
 function render(){const n=data.length,all=data.filter(d=>labs.every(l=>d.completed?.[l])).length;
-$('summary').textContent=`${n}/60 participantes registrados (${(n/60*100).toFixed(1)}%) · ${all} concluíram os quatro (${(all/60*100).toFixed(1)}% da turma).`;
+$('summary').textContent=`${n}/60 participantes registrados (${(n/60*100).toFixed(1)}%) · ${all} concluíram os seis (${(all/60*100).toFixed(1)}% da turma).`;
 $('cards').innerHTML=labs.map(l=>{let done=data.filter(d=>d.completed?.[l]).length,started=data.filter(d=>d.started?.[l]).length,p=100*done/60;return `<div class="card"><strong>${l.toUpperCase()}</strong><div class="big">${p.toFixed(1)}%</div><div>${done} de 60 concluíram</div><div class="bar"><span style="width:${p}%"></span></div><small>${started} iniciaram</small></div>`}).join('');
 $('rows').innerHTML=data.map(d=>`<tr><td>${d.code}</td>${labs.map(l=>`<td>${d.completed?.[l]?'✓ Concluído':d.started?.[l]?'◐ Iniciado':'—'}</td>`).join('')}</tr>`).join('');}
 $('openApp').onclick=async()=>{try{await setDoc(doc(db,'settings','application'),{open:true});await refresh()}catch(e){msg('Erro: '+e.message)}};

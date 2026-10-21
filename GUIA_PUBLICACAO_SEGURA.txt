@@ -1,0 +1,33 @@
+ATUALIZAÇÃO DA PLATAFORMA — 6 LABORATÓRIOS
+==========================================
+Estado: pacote preparado para publicação após validação; NÃO publicado automaticamente.
+Laboratórios: WASI, FDT, RAVLT, d2-R, Trilhas (A e B), Torre de Londres (3 níveis).
+
+ETAPA 1 — PRESERVAR A VERSÃO ATUAL
+1. No GitHub, faça download do ZIP do repositório atual (Code > Download ZIP) como backup.
+2. No painel do professor, exporte os dados de participação atuais.
+3. No Firebase Console, guarde uma cópia das regras do Firestore vigentes.
+
+ETAPA 2 — ATUALIZAR AS REGRAS
+1. Abra Firebase Console > Firestore Database > Rules, no projeto correto.
+2. Compare as regras atuais com firestore.rules deste pacote, sobretudo permissões e coleções.
+3. Publique as regras atualizadas. Copiar firestore.rules para o GitHub NÃO publica as regras no Firebase.
+
+ETAPA 3 — ARQUIVOS DO GITHUB
+1. Na raiz do repositório GitHub Pages, envie os arquivos deste pacote (sem o guia e sem o ZIP).
+2. Preserve o nome exato dos arquivos; verifique index.html e os links dos seis laboratórios.
+3. Aguarde o GitHub Pages atualizar.
+
+ETAPA 4 — TESTE ANTES DE ABRIR PARA A TURMA
+1. Professor: abra painel_professor.html e confirme que os seis laboratórios aparecem.
+2. Libere os novos laboratórios pelo controle do professor.
+3. Aluno de teste: em janela anônima, valide código, liberação, início e conclusão de Trilhas A+B.
+4. Teste Torre: conclua os três níveis; verifique que a conclusão só aparece após o nível 3.
+5. Verifique no painel e na exportação CSV os seis laboratórios.
+6. Verifique que os quatro laboratórios antigos continuam funcionando.
+7. Em caso de falha, restaure os arquivos e regras guardados no backup.
+
+ATENÇÃO
+- Não foi feita validação em navegador real com autenticação Firebase neste ambiente.
+- Não há publicação automática em GitHub/Firebase neste pacote.
+- Atividades são simulações didáticas; não equivalem a instrumentos clínicos padronizados.

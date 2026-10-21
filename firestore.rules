@@ -8,11 +8,13 @@ service cloud.firestore {
   function labReleased(lab){return exists(/databases/$(database)/documents/settings/labs) && get(/databases/$(database)/documents/settings/labs).data.get(lab, false) == true;}
   function validProgress(previous, next){
    let changed = next.diff(previous).affectedKeys();
-   return next.keys().hasOnly(['wasi','fdt','ravlt','d2r'])
+   return next.keys().hasOnly(['wasi','fdt','ravlt','d2r','tmt','tol'])
     && (!changed.hasAny(['wasi']) || labReleased('wasi'))
     && (!changed.hasAny(['fdt']) || labReleased('fdt'))
     && (!changed.hasAny(['ravlt']) || labReleased('ravlt'))
-    && (!changed.hasAny(['d2r']) || labReleased('d2r'));
+    && (!changed.hasAny(['d2r']) || labReleased('d2r'))
+    && (!changed.hasAny(['tmt']) || labReleased('tmt'))
+    && (!changed.hasAny(['tol']) || labReleased('tol'));
   }
   function sessionPath(uid){return /databases/$(database)/documents/studentSessions/$(uid);}
   function participantPath(code){return /databases/$(database)/documents/participants/$(code);}
