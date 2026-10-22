@@ -1,16 +1,1 @@
-PACOTE DE INTEGRAÇÃO — SEIS LABORATÓRIOS — PRÉVIA PARA TESTES
-
-Os quatro laboratórios originais foram mantidos. Acrescentados TMT (Trilhas) e ToL (Torre de Londres), com registro de início/conclusão via lab-sync.js.
-
-ATENÇÃO: ainda não publicado e não validado no Firebase em produção.
-Antes da publicação:
-1. Fazer backup do repositório e exportar dados atuais no painel.
-2. Publicar firestore.rules no projeto correto do Firebase (não basta copiar ao GitHub).
-3. Enviar os arquivos deste ZIP à raiz do repositório.
-4. Entrar no painel do professor e liberar individualmente Trilhas e Torre de Londres.
-5. Testar como aluno em janela anônima, inclusive início e conclusão.
-6. Conferir o painel e exportação CSV.
-
-Trilhas: conclusão após completar partes A e B. Torre: conclusão após atingir a configuração-alvo.
-A exportação local contém métricas da atividade, que NÃO são transmitidas ao Firebase.
-Não são aplicações padronizadas nem escores clínicos.
+Atualização somente das seis fichas técnicas. Substituir os seis arquivos HTML na raiz do repositório. Não altera index, Firebase, teacher.js ou regras. Faixas etárias identificadas por edição/modalidade; conferir manual e normas antes de uso profissional. Testar os dois botões, exercícios e registros após publicar.
