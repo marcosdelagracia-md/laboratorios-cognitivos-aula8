@@ -1,0 +1,14 @@
+ATUALIZAÇÃO LABD — 22/10/2026
+
+Alterações em seis arquivos laboratorio_*.html:
+- Apenas dois botões visíveis: Ficha Técnica e Iniciar Atividade.
+- Conteúdo de Modo de Aplicação preservado, agora em Orientações para realizar a atividade (painel expansível).
+- Fichas técnicas ampliadas: finalidade, faixa etária condicionada à edição, pertinência no envelhecimento, papel complementar, limitações e caráter didático.
+- IDs e scripts originais mantidos, inclusive integração Firebase.
+- Sem inclusão de FAB ou BAMS nesta atualização.
+
+PUBLICAÇÃO: substitua no GitHub somente os seis arquivos laboratorio_*.html. Não é necessário atualizar Firebase, index.html, painel ou JS.
+
+IMPORTANTE: faixas etárias que dependem de edição/manual permanecem identificadas como pendentes de confirmação. Verifique os manuais oficiais antes de divulgar números específicos.
+
+TESTE: acessar cada laboratório, alternar Ficha Técnica / Iniciar Atividade, abrir orientações, realizar atividade e conferir painel do professor.
