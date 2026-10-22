@@ -1,14 +1,6 @@
-LABORATÓRIOS COGNITIVOS — pacote revisado para testes (não homologado em produção)
-
-1. Guarde uma cópia de segurança da pasta anterior.
-2. No Firebase Authentication, mantenha E-mail/senha (professor) e Anônimo (alunos) ativados.
-3. No Firestore > Regras, publique o conteúdo integral de firestore.rules DESTE pacote somente ao iniciar os testes.
-4. No GitHub Pages, envie todos os arquivos DESTA pasta à raiz do repositório; os nomes precisam ser exatamente os nomes presentes aqui (sem (1)).
-5. No painel_professor.html, faça login com a conta docente; clique Abrir aplicação.
-6. Teste com dois navegadores/sessões anônimas diferentes. Cada sessão recebe um PSI distinto; a mesma sessão deve conservar o PSI entre os quatro laboratórios.
-7. Complete cada laboratório e confira o painel, que agora atualiza automaticamente.
-8. Para nova turma: encerrar aplicação, exportar CSV, zerar participantes E sessões, abrir novamente.
-
-LIMITAÇÕES: Identificação anônima representa navegador/sessão, não aluno real. Limpar dados, trocar de dispositivo ou usar janela anônima cria nova sessão e pode ocupar outra vaga. Não use como comprovação de presença, avaliação individual ou instrumento clínico. O código cliente pode declarar conclusão, sem garantia antifraude. O Firebase deve ser testado ao vivo antes da aula; este pacote não foi validado em conexão real com seu projeto.
-
-IMPORTANTE: Se o painel do professor for usado no mesmo navegador em que se testou como aluno, a conta docente e a sessão anônima podem interferir. Prefira janela anônima para aluno.
+Atualização das fichas técnicas do LabD (22/10/2026).
+Substitua apenas os seis arquivos laboratorio_*.html na raiz do repositório GitHub.
+TMT e TOL: evidências científicas de aplicabilidade em idosos integradas ao campo Por que utilizar na avaliação de idosos?, com referências clicáveis.
+Os demais quatro arquivos seguem a última versão padronizada.
+As atividades são simulações educacionais, sem equivalência psicométrica.
+Teste o funcionamento das atividades e registros Firebase após publicar.
